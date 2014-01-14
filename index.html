@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+
+        <script src='js/jquery-1.9.1.min.js'></script>
+        <script src='libs/jquery-ui.js'></script>
+        <script src='libs/decode.min.js'></script>
+
+        <link href='libs/flat-ui/css/flat-ui.css' rel='stylesheet' type='text/cs' />
+        <link href='css/style.css' rel='stylesheet' type='text/cs' />
+        <title>html5播放器</title>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div class="search">
+        <select name="" id="type">
+            <option value="1">精选集</option>
+            <option value="0">歌曲</option>
+        </select><input type="text" placeholder="请输入歌曲名称..." id="search" />
+        </div>
+        <div id="player" class="player">
+            <audio id="p"></audio>
+            <div class="cover"></div>
+            <div class="ctrl">
+                <div class="tag">
+                    <strong class="name">Title</strong>
+                    <span class="artist">Artist</span>
+                    <span class="album">Album</span>
+                </div>
+                <div class="control">
+                    <div class="left">
+                        <div class="rewind fui-arrow-left"></div>
+                        <div class="playback fui-play"></div>
+                        <div class="fastforward fui-arrow-right"></div>
+                    </div>
+                    <div class="volume right">
+                        <div class="mute fui-volume left"></div>
+                        <div class="slider left">
+                            <div class="pace"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="slider">
+                        <div class="loaded"></div>
+                        <div class="pace"></div>
+                    </div>
+                    <div class="timer left">0:00</div>
+                    <div class="right">
+                        <div class="repeat icon">re</div>
+                        <div class="shuffle icon">sh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul id="playlist"></ul>
+        <script src="js/script.js"></script>
+    </body>
+</html>

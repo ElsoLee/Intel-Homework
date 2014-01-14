@@ -1,0 +1,117 @@
+//虾米音乐API
+
+// 单个歌曲格式
+{
+    album_id: "3670"
+    album_logo: "http://img.xiami.com/images/album/img68/768/3670_3.jpg"
+    artist_id: "768"
+    artist_name: "潘玮柏"
+    category: "华语"
+    content_hash: "046451dfc921ef43db0e116e8e691676"
+    content_size: "11232120"
+    default_resource_id: "69225"
+    file_size: null
+    grade: "-1"
+    is_play: "1"
+    length: null
+    listen_file: "/aliyunos/768/768/3670/45137_69225_l.mp3"
+    location: "http://m1.file.xiami.com/768/768/3670/45137_69225_l.mp3"
+    lock_lrc: "2"
+    low_hash: "046451dfc921ef43db0e116e8e691676"
+    low_size: "11232120"
+    lyric: "http://img.xiami.com/./lyric/upload/37/45137_1322711055.lrc"
+    name: "不得不爱"
+    number: 30198.3964844
+    same_songs: [{song_id:2131842, album_id:172492, artist_id:768, name:不得不爱, artist_name:潘玮柏, sub_title:,…}]
+    singers: "潘玮柏;弦子"
+    song_id: "45137"
+    status: "1"
+    sub_title: ""
+    title: "高手"
+    whole_hash: "046451dfc921ef43db0e116e8e691676"
+    year_play: "166188"
+}
+
+//搜索api
+{
+    url:"http://www.xiami.com/app/iphone/search/key"+keyword,
+    method:"get",
+    callback:{
+        more: "true"
+        songs: [
+                    {
+                        song_id:45137, 
+                        album_id:3670, 
+                        artist_id:768, 
+                        name:不得不爱, 
+                        artist_name:潘玮柏, 
+                        sub_title:,
+                        ......
+                    }
+                ]
+        status: "ok"
+    }
+}
+
+//搜索精选集
+{
+    url:"http://www.xiami.com/collect/search?key="+id
+}
+
+// 获取精选集
+{
+    url:'http://www.xiami.com/song/playlist/type/3/id/'+id,
+    method:"get",
+    callback:"xml"
+}
+
+
+// 豆瓣api
+
+//获取豆瓣频道列表
+{
+    url:"http://www.douban.com/j/app/radio/channels",
+    method:"get",
+    callback:{
+        "channels":[
+            {
+                "name":"私人兆赫",
+                "seq_id":0,
+                "abbr_en":"My",
+                "channel_id":0,
+                "name_en":"Personal Radio"
+            }
+        ]
+    }
+}
+
+//获取某一频道歌曲列表
+{
+    url:'http://douban.fm/j/mine/playlist?channel="+'+channel_id,
+    method:'get',
+    callback:{
+        "r":0,
+        "song":[
+            {
+                "album":"\/subject\/6528891\/",
+                "picture":"http:\/\/img3.douban.com\/mpic\/s6790977.jpg",
+                "ssid":"b8b4",
+                "artist":"严爵",
+                "url":"http:\/\/mr3.douban.com\/201305261539\/3281904700d5b968d190e677cbe1aa6b\/view\/musicianmp3\/mp3\/x1919905.mp3",
+                "company":"",
+                "title":"又不是这样就不孤独.mp3",
+                "rating_avg":3.90552,
+                "length":0,
+                "subtype":"U",
+                "public_time":"2011",
+                "sid":"1919905",
+                "aid":"6528891",
+                "kbps":"64",
+                "albumtitle":"醉后决定爱上你",
+                "like":false
+            }
+        ]
+    }
+}
+
+

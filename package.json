@@ -1,0 +1,13 @@
+{
+    "name":"nw-demo",
+    "main":"index.html",
+    "version":1.0,
+    "window":{
+        //去除默认样式
+        // "frame":false,
+        "position": "center",
+        "width": 756,
+        "height":726
+        // "toolbar": false,
+    }
+}
